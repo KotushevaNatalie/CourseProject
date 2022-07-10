@@ -40,24 +40,25 @@ public class RegistrController {
 
     @FXML
     void initialize() {
+        ConnectionDataBase connectionDataBase = new ConnectionDataBase();
+
         registration.setOnAction(actionEvent -> {
-            registration.getScene().getWindow().hide();
+            String u_name = name.getText();
+            String u_secondname = secondname.getText();
+            String u_lastname = lastname.getText();
+            String u_loginr = loginr.getText();
+            String u_passwordr = passwordr.getText();
 
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(getClass().getResource("/com/example/courseproject/hello-view.fxml"));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            Parent p = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(p));
-            stage.showAndWait();
+            User user = new User(u_name, u_secondname, u_lastname, u_loginr, u_passwordr);
+            connectionDataBase.registration( user);
         });
+
+
+
+
     }
+
+
 }
 
 
