@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="627.0" style="-fx-background-color: #8a2be2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.SuperUserControllerMyData">
+    <children>
+        <AnchorPane layoutY="36.0" prefHeight="426.0" prefWidth="627.0" style="-fx-background-color: #F2F3F4;">
+            <children>
+                <PasswordField fx:id="password" layoutX="199.0" layoutY="94.0" promptText="Пароль" />
+                <TextField fx:id="secondname" layoutX="199.0" layoutY="52.0" promptText="Фамилия" />
+                <Button layoutX="369.0" layoutY="92.0" mnemonicParsing="false" onAction="#Update" prefHeight="26.0" prefWidth="78.0" text="Изменить" />
+                <TextField fx:id="login" layoutX="32.0" layoutY="94.0" promptText="Логин" />
+                <Label layoutX="155.0" layoutY="14.0" text="Настройки аккаунтов">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="lastname" layoutX="369.0" layoutY="52.0" promptText="Отчество" />
+                <TextField fx:id="name" layoutX="32.0" layoutY="52.0" promptText="Имя" />
+            <TableView fx:id="super_user" layoutX="-2.0" layoutY="137.0" onMouseClicked="#getSelected" prefHeight="287.0" prefWidth="627.0">
+              <columns>
+                <TableColumn fx:id="super_id" prefWidth="75.0" sortable="false" text="id" />
+                <TableColumn fx:id="super_login" prefWidth="75.0" text="login" />
+                  <TableColumn fx:id="super_password" prefWidth="75.0" text="password" />
+                  <TableColumn fx:id="super_name" prefWidth="128.80006408691406" text="Имя" />
+                  <TableColumn fx:id="super_surname" prefWidth="123.20001220703125" text="Фамилия" />
+                  <TableColumn fx:id="super_patronymic" prefWidth="144.79998779296875" text="Отчество" />
+              </columns>
+            </TableView>
+            <Button layoutX="459.0" layoutY="92.0" mnemonicParsing="false" onAction="#Delete" text="Удалить" />
+            <Button layoutX="532.0" layoutY="92.0" mnemonicParsing="false" onAction="#Insert" text="Добавить" />
+            <TextField fx:id="id" layoutX="547.0" layoutY="51.0" prefHeight="26.0" prefWidth="38.0" promptText="id" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="14.0" layoutY="14.0">
+            <font>
+                <Font size="11.0" />
+            </font>
+        </Label>
+      <Label layoutX="477.0" layoutY="11.0" text="Суперпользователь">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
