@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="450.0" style="-fx-background-color: #8a2be2;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.courseproject.Controller">
    <children>
-      <AnchorPane layoutY="36.0" prefHeight="300.0" prefWidth="450.0" style="-fx-background-color: #F2F3F4;">
+      <AnchorPane layoutY="43.0" prefHeight="293.0" prefWidth="450.0" style="-fx-background-color: #F2F3F4;">
          <children>
             <Button fx:id="authorized" layoutX="201.0" layoutY="161.0" mnemonicParsing="false" text="Войти" />
             <TextField fx:id="login" layoutX="151.0" layoutY="67.0" promptText="Логин" />
@@ -32,5 +32,6 @@
             <Font size="11.0" />
          </font>
       </Label>
+      <Button fx:id="guest" layoutX="389.0" layoutY="8.0" mnemonicParsing="false" text="Гость" />
    </children>
 </AnchorPane>
